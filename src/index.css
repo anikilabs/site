@@ -37,6 +37,7 @@ code {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 .elevated {
@@ -45,4 +46,38 @@ code {
 
 .flex-left {
   margin-right: 20%;
+}
+
+.text-glow {
+  text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
+}
+
+:root {
+  --primary-color: 228, 37, 40;
+  --text-color: 256, 256, 256;
+}
+
+.btn {
+  font-family: sans-serif;
+  font-size: 18px;
+  padding: 12px 32px;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 20px 5px;
+}
+
+.btn-glow:hover {
+  box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+}
+
+.btn-gradient-border {
+  color: rgb(var(--text-color));
+  border: 2px double transparent;
+  background-image: linear-gradient(rgb(55, 0, 0), rgb(33, 13, 13)),
+    radial-gradient(circle at left top, #e42528, #ffffff);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
